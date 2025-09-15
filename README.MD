@@ -191,16 +191,9 @@ naver-scraper-api/
 
 ### Proxy Setup
 
-The API supports multiple proxy providers:
-
-**Zyte Smart Proxy Manager:**
+**Proxy:**
 ```env
-PROXIES=proxy-hub.scraperapi.com:8001:username:password
-```
-
-**Custom Proxy Pool:**
-```env
-PROXIES=proxy1.com:8080:user1:pass1,proxy2.com:8080:user2:pass2
+Format: http://user:pass@host:port
 ```
 
 ### Performance Tuning
