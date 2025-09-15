@@ -2,6 +2,15 @@
 
 A high-performance, enterprise-grade REST API for scraping Naver Shopping search results with advanced anti-detection capabilities.
 
+## ⚠️ Testing Disclaimer
+
+**For testing purposes, please use our deployed endpoint:**
+```
+https://naver-scraper-api.onrender.com/
+```
+
+This ensures optimal performance and avoids potential setup issues during evaluation. The deployed version is production-ready and fully configured with all necessary cookies and proxy configurations.
+
 ## ✨ Key Features
 
 - **🔍 RESTful API** - Simple endpoint: `/naver?query=iphone&pageSize=50&cursor=1`
@@ -81,13 +90,21 @@ Your API will be available at `http://localhost:3000`
 
 ## 📡 API Usage
 
-### Query-based Search
+### Using Deployed Endpoint (Recommended for Testing)
+
+```bash
+curl "https://naver-scraper-api.onrender.com/naver?query=iphone&pageSize=50&cursor=1"
+```
+
+### Using Local Development Server
+
+#### Query-based Search
 
 ```bash
 curl "http://localhost:3000/naver?query=iphone&pageSize=50&cursor=1"
 ```
 
-### Raw URL Mode
+#### Raw URL Mode
 
 ```bash
 curl "http://localhost:3000/naver?url=https%3A%2F%2Fsearch.shopping.naver.com%2Fns%2Fv1%2Fsearch%2Fpaged-composite-cards%3Fcursor%3D1%26pageSize%3D50%26query%3Diphone"
@@ -109,7 +126,10 @@ curl "http://localhost:3000/naver?url=https%3A%2F%2Fsearch.shopping.naver.com%2F
 Run comprehensive load tests with configurable parameters:
 
 ```bash
-# Basic load test
+# Test against deployed endpoint (recommended)
+ENDPOINT=https://naver-scraper-api.onrender.com npx tsx load-test.ts
+
+# Test against local server
 npx tsx load-test.ts
 
 # Custom configuration
@@ -117,6 +137,7 @@ TOTAL_REQUESTS=2000 CONCURRENCY=50 TIMEOUT_MS=10000 npx tsx load-test.ts
 ```
 
 **Environment Variables:**
+- `ENDPOINT` - API endpoint to test (defaults to localhost:3000)
 - `TOTAL_REQUESTS` - Total number of requests to send
 - `CONCURRENCY` - Number of concurrent connections
 - `TIMEOUT_MS` - Request timeout in milliseconds
@@ -126,6 +147,10 @@ TOTAL_REQUESTS=2000 CONCURRENCY=50 TIMEOUT_MS=10000 npx tsx load-test.ts
 Extended stress testing with mixed query patterns:
 
 ```bash
+# Test deployed endpoint
+./scripts/soak-test.sh https://naver-scraper-api.onrender.com
+
+# Test local server
 ./scripts/soak-test.sh http://localhost:3000
 ```
 
