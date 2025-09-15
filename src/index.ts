@@ -235,7 +235,7 @@ app.get("/_debug/cookie", async (_req, res) => {
 
 // Health + root info
 app.get("/", (_req, res) =>
-  res.type("text").send("Naver Scraper API is running. Try /v1/naver?query=iphone")
+  res.type("text").send("Naver Scraper API is running. Try /naver?query=iphone")
 );
 app.get("/health", (_req, res) => res.json({ ok: true }));
 
