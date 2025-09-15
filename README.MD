@@ -1,6 +1,6 @@
 # 🛍️ Naver Scraper API
 
-A high-performance, enterprise-grade REST API for scraping Naver Shopping search results with advanced anti-detection capabilities.
+REST API for scraping Naver Shopping search results with advanced anti-detection capabilities.
 
 ## ⚠️ Testing Disclaimer
 
