@@ -1,0 +1,32 @@
+[
+  {
+    "name": "sus_val",
+    "value": "DZrahwidnqCrh3zLl53JIUxW",
+    "domain": ".shopping.naver.com",
+    "path": "/",
+    "expires": 1757895494.704496,
+    "size": 31,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "priority": "Medium",
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  },
+  {
+    "name": "nstore_session",
+    "value": "AY85hKiEiqMPTW8P+cGGH2UA",
+    "domain": ".naver.com",
+    "path": "/",
+    "expires": 1789431201.5146,
+    "size": 38,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "priority": "Medium",
+    "sameParty": false,
+    "sourceScheme": "Secure",
+    "sourcePort": 443
+  }
+]
